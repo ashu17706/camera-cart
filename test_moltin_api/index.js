@@ -17,4 +17,7 @@ Moltin
   .All()
   .then(products => {
     console.log(`Products: ${JSON.stringify(products, null, 2)}`);
+  })
+  .catch(error => {
+    console.error(error);
   });
