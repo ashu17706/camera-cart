@@ -8,20 +8,21 @@ import Home from "./home";
 import Product from "./product";
 import Cart from "./cart";
 import Checkout from "./checkout";
+import './App.css';
 
 class App extends Component {
   render() {
-    return <div>
-        <Header />
+    return [
+        <Header />,
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/product/:id" component={Product} />
           <Route path="/cart" component={Cart} />
           <Route path="/checkout" component={Checkout} />
           <Route path="*" component={NotFound} />
-        </Switch>
-        <Footer />
-      </div>;
+        </Switch>,
+      <Footer />
+    ];
   }
 }
 

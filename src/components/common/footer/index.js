@@ -1,5 +1,8 @@
 import React from 'react';
+import classNames from 'classnames';
+
+import './footer.css';
 
 export default () => (
-  <div>Footer</div>
+  <div className={classNames('footer')}>Footer</div>
 );
