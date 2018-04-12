@@ -10,3 +10,11 @@ Moltin
   .then(response => {
     console.log(`Authenticated, ${JSON.stringify(response, null, 2)}`);
   });
+
+
+Moltin
+  .Products
+  .All()
+  .then(products => {
+    console.log(`Products: ${JSON.stringify(products, null, 2)}`);
+  });
