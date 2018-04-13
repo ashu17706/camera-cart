@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-An e-commerce store for digital cameras using (Moltin)[https://moltin.com/] API's.
+An e-commerce store for digital cameras using [Moltin](https://moltin.com/) API's.
 
 ## Development Setup
 ```bash
@@ -12,7 +12,7 @@ yarn start
 ```
 
 ## Deployment
-This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live demo)[https://camera-cart.now.sh/].
+This is deployed with [now.sh](https://zeit.co/now). Please go to (here for live demo)[https://camera-cart.now.sh/].
 
 ## Planning
  - Pages
@@ -23,15 +23,15 @@ This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live
   - Not Found Page (If someone enters the wrong URL)    
 
 
-  // Next Step
+   Next Step
    [*] Add to cart in Home Page
    
 
-   // Cart Page
+   Cart Page
     [*] Increse quantity
     [*] Decrese quantity
     [*] Remove from Cart // keep removing items(As of now no seprate binding)
-    [WIP] Checkout 
+    [*] Checkout 
 
 ## Final Submission Notes
 - Home page which fetches the Products
@@ -41,7 +41,7 @@ This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live
 
 ## Missing Things
 - Validation in forms in the Checkout pages
-- Checkout summery could have been better If I would have utilized checkout API from (Moltin)[https://docs.moltin.com/#checkout]
+- Checkout summery could have been better If I would have utilized checkout API from [Moltin](https://docs.moltin.com/#checkout)
 
 
 ## What can be better in less time ? (Low hanging fruits)
@@ -63,8 +63,8 @@ console.log("Feel free to get back with suggestion, imporvements, and feedback")
 ## Thanks for the assignment. I felt like going back to a Hackathon and fiddling with a new API. [Great experience]
 
 ## What I picked up new ?
-- (redux-saga)[https://redux-saga.js.org/], Till now I just managed my code with thunk style async
+- [redux-saga](https://redux-saga.js.org/), Till now I just managed my code with thunk style async
 
 
 ## Signing Off
-_/\_
+_/\\_
