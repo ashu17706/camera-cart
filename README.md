@@ -7,12 +7,13 @@ An e-commerce store for digital cameras using [Moltin](https://moltin.com/) API'
 ## Development Setup
 ```bash
 git clone https://github.com/ashu17706/camera-cart.git
+cd camera-cart
 yarn
 yarn start
 ```
 
 ## Deployment
-This is deployed with [now.sh](https://zeit.co/now). Please go to (here for live demo)[https://camera-cart.now.sh/].
+This is deployed with [now.sh](https://zeit.co/now). Please click (here for live demo)[https://camera-cart.now.sh/].
 
 ## Planning
  - Pages
