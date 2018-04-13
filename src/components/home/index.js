@@ -1,37 +1,35 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import classNames from "classnames";
+
+import ProductCardSmall from '../common/productCardSmall';
+
 import { LOAD_PRODUCTS_START } from "../../types";
+import './home.css';
 
 class Home extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
+  componentWillMount() {
+    const { fetchProducts } =this.props;
+    fetchProducts();
+  }
+  
   render() {
     const { fetchProducts, products, loading, loaded } = this.props;
-    return (
-      <div className="main">
-        <button onClick={fetchProducts}>Get Products</button>
-        { loading ? 
-          'loading...' : 
-          <ul>
-          {
-            products
-              .map(product => {
-                return <li key={product.id}>{product.id}</li>
-              })
+    return <div className={classNames("main", "home")}>
+        {loading ? "loading..." :
+             products.map(product => {
+              return <ProductCardSmall key={product.id} product={product} />;
+            })
           }
-          </ul>
-        }
-      </div>
-    );
+      </div>;
   }
 }
 
 const mapStateToProps = state => {
-  console.log(JSON.stringify(state.products, null, 2));
   return { 
     products: state.products,
     loading: state.loading
