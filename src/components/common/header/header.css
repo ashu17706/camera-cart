@@ -1,5 +1,21 @@
 .header {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 56px;
     height: 56px;
-    border: 1px solid #ccc;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.header .cart-icon {
+    margin-right: 20px;
 }

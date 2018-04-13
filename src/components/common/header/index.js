@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import './header.css';
+import { Link } from 'react-router-dom';
 
+import './header.css';
+import CartIcon from './cartIcon';
 export default class Header extends Component {
+  static defaultProps = { count: 0 };
+
   render() {
-    return (
-      <div className={classNames('header')}>
-        Header
-      </div>
-    );
+    const { count } = this.props;
+    return <div className={classNames("header")}>
+        <Link to="/">
+          <h1>Camera Store</h1>
+        </Link>
+        <CartIcon count={count} />
+      </div>;
   }
 }
