@@ -12,7 +12,7 @@ yarn start
 ```
 
 ## Deployment
-This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live demo)[https://build-zljtsvwrin.now.sh/].
+This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live demo)[https://camera-cart.now.sh/].
 
 ## Planning
  - Pages
@@ -20,7 +20,7 @@ This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live
   - Cart Page (When User clicks on the Cart)
   - Checkout Page
   - Confirmation Page (thinking, the flow)
-  - Not Found Page (If someone enters the wrong URL)
+  - Not Found Page (If someone enters the wrong URL)    
 
 
   // Next Step
