@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { connect } from "react-redux";
-import classNames from 'classnames';
+import classNames from "classnames";
 import { LOAD_CART, INC_PROD_QUANTITY, DEC_PROD_QUANTITY } from "./../../types";
 import { Link } from "react-router-dom";
-import './index.css';
+import "./index.css";
 
-import CartItem from './cartItem';
+import CartItem from "./cartItem";
 
 class Cart extends Component {
   componentWillMount() {
@@ -18,7 +18,7 @@ class Cart extends Component {
         { items.length != 0 ? items.map(item => (
               <CartItem key={item.id} {...item} {...this.props} />
             ))
-            : "Your cart is empty" }
+            : <div className="cart-action"><h1>Your Cart is Empty</h1></div> }
         { items.length != 0 ? 
         <div className="cart-action">
           <h1>{totalCartPrice}</h1>
@@ -26,7 +26,7 @@ class Cart extends Component {
             <p>Checkout</p>
           </Link>
         </div>
-        : ''
+        : ""
         }
       </div>;
   }

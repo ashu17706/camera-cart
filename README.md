@@ -11,6 +11,9 @@ yarn
 yarn start
 ```
 
+## Deployment
+This is deployed with (now.sh)[https://zeit.co/now]. Please go to (here for live demo)[https://build-zljtsvwrin.now.sh/].
+
 ## Planning
  - Pages
   - Home Page ( Landing Page, List all the available Products)
@@ -21,11 +24,11 @@ yarn start
 
 
   // Next Step
-   [] Add to cart in Home Page
+   [*] Add to cart in Home Page
    
 
    // Cart Page
-    [] Increse quantity
-    [] Decrese quantity
-    [] Remove from Cart
-    [] Checkout 
+    [*] Increse quantity
+    [*] Decrese quantity
+    [*] Remove from Cart // keep removing items(As of now no seprate binding)
+    [WIP] Checkout 
