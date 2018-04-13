@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 
-import Header from './common/header';
-import Footer from './common/footer';
-import NotFound from './common/notFound';
+import Header from "./common/header";
+import Footer from "./common/footer";
+import NotFound from "./common/notFound";
 import Home from "./home";
 import Product from "./product";
 import Cart from "./cart";
 import Checkout from "./checkout";
-import './App.css';
+import "./App.css";
 
 class App extends Component {
   render() {

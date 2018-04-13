@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import classNames from "classnames";
 
-import './header.css';
-import CartIcon from './cartIcon';
-export default class Header extends Component {
-  static defaultProps = { count: 0 };
-
+import "./index.css";
+import CartIcon from "./cartIcon";
+class Header extends Component {
   render() {
     const { count } = this.props;
     return <div className={classNames("header")}>
         <Link to="/">
           <h1>Camera Store</h1>
         </Link>
-        <CartIcon count={count} />
+        <CartIcon count={ count } />
       </div>;
   }
 }
+
+const mapStateToProps = ({ cart }) => ({
+  count: cart.length
+});
+
+export default connect(mapStateToProps, null)(Header);

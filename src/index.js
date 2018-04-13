@@ -1,22 +1,28 @@
-import ReactDOM from 'react-dom';
-import React from 'react';
-import { createStore, applyMiddleware } from 'redux';
+import ReactDOM from "react-dom";
+import React from "react";
+import { createStore, applyMiddleware } from "redux";
 import createSagaMiddleware from "redux-saga";
-import rootReducer from './reducers';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
-import fetchP from "./sagas/fetchProducts";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import './index.css';
-import App from './components/App';
+import rootReducer from "./reducers";
+
+import rootSaga from "./sagas/rootSage";
+
+import MotlinApi from "./motlin";
+
+import "./index.css";
+import App from "./components/App";
 
 // create the saga middleWare
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 
 // run the sagaMiddleWare
-sagaMiddleware.run(fetchP);
+sagaMiddleware.run(rootSaga);
 
+// authenticate with motlin
+MotlinApi.authenticate();
 
 ReactDOM
   .render(
@@ -25,5 +31,5 @@ ReactDOM
         <App />
       </Router>
     </Provider>,
-    document.getElementById('root')
+    document.getElementById("root")
   );

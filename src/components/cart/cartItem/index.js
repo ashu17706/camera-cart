@@ -1,25 +1,25 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
 export default ({
-  item = {
-    "img-src":
-      "https://rukminim1.flixcart.com/image/100/100/dslr-camera/f/h/3/digital-camera-d3400-kit-with-lens-af-p-dx-nikkor-18-55-mm-f-3-5-original-imaemk39zmqfvvr6.jpeg?q=90",
-    title: "Some product name",
-    quantity: 1
-  }
+  name,
+  quantity,
+  product_id,
+  id,
+  increseQuantity,
+  decreaseQuantity
 }) => (
   <div className="cart-item">
-    <img src={item["img-src"]} />
-    <p className="title">{item.title}</p>
+    <img src="" />
+    <p className="title">{name}</p>
     <div className="quantity">
       <p>Quantity:</p>
-      <p>{item.quantity}</p>
+      <p>{quantity}</p>
     </div>
 
     <div className="actions">
-      <span> - </span>
-      <span> + </span>
+      <span onClick={() => decreaseQuantity(id, quantity - 1)}> - </span>
+      <span onClick={() => increseQuantity(id, quantity + 1)}> + </span>
     </div>
   </div>
 );

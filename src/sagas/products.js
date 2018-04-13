@@ -4,20 +4,19 @@ import {
   LOAD_PRODUCTS_END,
   ERROR_WHILE_FETCHING
 } from "../types";
+
 import MotlinApi from "../motlin";
 
 function* loadProductsWorker() {
   try {
-    const products = yield call(MotlinApi, null);
+    const products = yield call(MotlinApi.loadProducts, null);
+    // console.log(JSON.stringify(products, null, 2));
     yield put({ type: LOAD_PRODUCTS_END, payload: products });
-  } catch (e) {
-    yield put({ type: ERROR_WHILE_FETCHING, error: e.message });
+  } catch (error) {
+    yield put({ type: ERROR_WHILE_FETCHING, error: error.message });
   }
 }
 
-// watcher for Products
-const fetchP = function* () {
-  yield takeLatest(LOAD_PRODUCTS_START, loadProductsWorker);
-}
-
-export default fetchP;
+export const productSagas = [
+  takeLatest(LOAD_PRODUCTS_START, loadProductsWorker)
+];

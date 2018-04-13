@@ -16,10 +16,10 @@
     outline: none;
 }
 
-.card-item .title {
-  height: 40px;
-  width: 100px;
-  overflow: hidden;  
+.cart-item .title {
+    height: 40px;
+    width: 400px;
+    overflow: hidden;
 }
 
 .cart-item .actions span {
@@ -34,15 +34,22 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.cart-item .actions span:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s all;
+}
+
 .cart-item .quantity {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .cart-item .quantity p {
-  display: inline;
+    display: inline;
 }
 
 .cart-item .quantity p:first-child {
-  margin-right: 10px;
-  color: #808080;
+    margin-right: 10px;
+    color: #808080;
 }

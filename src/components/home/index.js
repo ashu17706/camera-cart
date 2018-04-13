@@ -1,28 +1,27 @@
 import React, { Component } from "react";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import classNames from "classnames";
 
-import ProductCardSmall from '../common/productCardSmall';
+import ProductCardSmall from "./homeCard";
 
-import { LOAD_PRODUCTS_START } from "../../types";
-import './home.css';
+import { LOAD_PRODUCTS_START, ADD_TO_CART_START, LOAD_CART } from "../../types";
+
+import "./home.css";
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentWillMount() {
-    const { fetchProducts } =this.props;
-    fetchProducts();
+    // populate the products
+    this.props.getProducts();
+    this.props.loadCart();
   }
   
   render() {
-    const { fetchProducts, products, loading, loaded } = this.props;
+    const { products, loading, loaded } = this.props;
+
     return <div className={classNames("main", "home")}>
         {loading ? "loading..." :
              products.map(product => {
-              return <ProductCardSmall key={product.id} product={product} />;
+              return <ProductCardSmall key={product.id} product={product} {...this.props } />;
             })
           }
       </div>;
@@ -37,8 +36,15 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchProducts: () => {
+  getProducts: () => {
     dispatch({ type: LOAD_PRODUCTS_START });
+  },
+  loadCart: () => {
+    console.log("load Cart");
+    dispatch({ type: LOAD_CART });
+  },
+  addToCart: (id) => {
+    dispatch({ type: ADD_TO_CART_START, payload: id });
   }
 });
 
