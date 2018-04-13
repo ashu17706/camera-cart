@@ -22,7 +22,7 @@ class Cart extends Component {
         { items.length != 0 ? 
         <div className="cart-action">
           <h1>{totalCartPrice}</h1>
-          <Link to="/checkout">
+          <Link to="/checkout/details">
             <p>Checkout</p>
           </Link>
         </div>

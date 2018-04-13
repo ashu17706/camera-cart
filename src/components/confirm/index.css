@@ -1,0 +1,14 @@
+.confirm {
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm .heading {
+    border: 1px solid #ccc;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

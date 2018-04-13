@@ -1,0 +1,68 @@
+.checkout {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout .heading {
+    border: 1px solid #ccc;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.main-section div {
+    padding: 10px;
+}
+
+.main-section .form .head,
+.main-section .summary .head {
+    height: 60px;
+    border: 1px solid #f1f1f1;
+}
+
+.main-section .form {
+    width: 50%;
+    border: 1px solid #f1f1f1;
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.main-section .form .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+
+.main-section .form .body button {
+  height: 40px;
+  width: 100%;
+}
+
+.main-section .form input {
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  outline: none;
+}
+ .main-section .summary {
+    width: 40%;
+    border: 1px solid #f1f1f1;
+    min-height: 400px;
+}
