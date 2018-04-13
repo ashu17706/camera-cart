@@ -18,3 +18,14 @@ yarn start
   - Checkout Page
   - Confirmation Page (thinking, the flow)
   - Not Found Page (If someone enters the wrong URL)
+
+
+  // Next Step
+   [] Add to cart in Home Page
+   
+
+   // Cart Page
+    [] Increse quantity
+    [] Decrese quantity
+    [] Remove from Cart
+    [] Checkout 
