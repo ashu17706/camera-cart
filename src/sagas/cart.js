@@ -10,16 +10,6 @@ import {
 
 import MotlinApi from "../motlin";
 
-// helper function to get previous length
-// function* getPreviousCountForProduct(productId) {
-//   const state = yield select();
-//   const product = 
-//     state
-//     .cart
-//     .filter(product => product.product_id === productId)[0]
-//     .quantity;
-// }
-
 function* addToCartWorker(action) {
   try {
     const cart = yield call(MotlinApi.addToCart, action.payload);

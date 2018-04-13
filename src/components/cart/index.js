@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import classNames from 'classnames';
 import { LOAD_CART, INC_PROD_QUANTITY, DEC_PROD_QUANTITY } from "./../../types";
-
+import { Link } from "react-router-dom";
 import './index.css';
 
 import CartItem from './cartItem';
@@ -13,11 +13,20 @@ class Cart extends Component {
   }
 
   render() {
-    const { items } = this.props;
+    const { items, totalCartPrice } = this.props;
     return <div className={classNames("main", "cart")}>
-        {
-          items
-          .map(item => <CartItem key={item.id} {...item} {...this.props} />)
+        { items.length != 0 ? items.map(item => (
+              <CartItem key={item.id} {...item} {...this.props} />
+            ))
+            : "Your cart is empty" }
+        { items.length != 0 ? 
+        <div className="cart-action">
+          <h1>{totalCartPrice}</h1>
+          <Link to="/checkout">
+            <p>Checkout</p>
+          </Link>
+        </div>
+        : ''
         }
       </div>;
   }
@@ -25,7 +34,8 @@ class Cart extends Component {
 
 const mapStateToProps = state => {
   return {
-    items: state.cart
+    items: state.cart,
+    totalCartPrice: state.totalCartPrice
   }
 }
 
