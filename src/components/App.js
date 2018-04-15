@@ -10,7 +10,6 @@ import Cart from "./cart";
 import Checkout from "./checkout";
 import Confirmation from "./confirm";
 
-import "./App.css";
 
 class App extends Component {
   render() {
