@@ -14,9 +14,21 @@ Moltin
 
 Moltin
   .Products
+  .With('main_image')
   .All()
-  .then(products => {
-    console.log(`Products: ${JSON.stringify(products, null, 2)}`);
+  .then(({data, included: { main_images }}) => {
+    const products = data.map(product => {
+      const imageId = product.relationships.main_image ? product.relationships.main_image.data.id : false;
+
+       return {
+         ...product,
+         imageUrl: imageId 
+                    ? main_images.find(image => image.id === imageId).link.href
+                    : ''
+       }
+    });
+
+    console.log(products);
   })
   .catch(error => {
     console.error(error);
