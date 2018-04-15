@@ -3,11 +3,16 @@ import "./index.css";
 import classNames from "classnames";
 
 export default ({
-  product: { name, id, meta: { display_price: { with_tax: { formatted } } } },
+  product: {
+    name,
+    id,
+    imageUrl, 
+    meta: { display_price: { with_tax: { formatted } } }
+  },
   addToCart
 }) => (
   <div className={classNames("product-card-small")}>
-    <img src="" />
+    <img src={imageUrl} />
     <p className="title">{name}</p>
     <div className="action">
       <p className="price">{formatted}</p>

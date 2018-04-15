@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
     case LOAD_PRODUCTS_END:
       return { 
           ...state,
-          products: [...action.payload.data],
+          products: [...action.payload],
           loading: false,
           loaded: true 
       };

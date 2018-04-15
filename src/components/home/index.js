@@ -40,7 +40,6 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: LOAD_PRODUCTS_START });
   },
   loadCart: () => {
-    console.log("load Cart");
     dispatch({ type: LOAD_CART });
   },
   addToCart: (id) => {

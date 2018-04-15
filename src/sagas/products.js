@@ -1,4 +1,4 @@
-import { call, put, takeLatest,  } from "redux-saga/effects";
+import { call, put, takeLatest } from "redux-saga/effects";
 import {
   LOAD_PRODUCTS_START,
   LOAD_PRODUCTS_END,
